@@ -2,6 +2,10 @@ import time
 
 import redis
 from flask import Flask
+from requests import get
+
+ip = get('https://api.ipify.org').text
+print ('My public IP address is:', ip)
 
 
 app = Flask(__name__)
